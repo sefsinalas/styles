@@ -2,8 +2,8 @@
 
 body {
   padding:50px;
-  font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
+  font:17px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#555;
   font-weight:300;
 }
 
@@ -139,7 +139,6 @@ header ul a strong {
 
 section {
   width:700px;
-  float:right;
   padding-bottom:50px;
 }
 
@@ -231,4 +230,46 @@ hr {
     font-size:12pt;
     color:#444;
   }
+}
+
+
+#toc {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    position: fixed;
+    background: #333;
+    box-shadow: inset -5px 0 5px 0px #000;
+    width: 350px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#toc li {
+    padding: 5px 10px;
+}
+
+#toc a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+#toc .toc-h2 {
+    padding-left: 50px;
+}
+
+#toc .toc-h3 {
+    padding-left: 75px;
+}
+
+#toc .toc-active {
+    background: #336699;
+    box-shadow: inset -5px 0px 10px -5px #000;
 }
