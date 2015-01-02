@@ -80,8 +80,7 @@ echo "Aqui el codigo";
 
 <p>Las clases se deberan nombrar usando StudlyCaps.</p>
 
-<pre><code>class MiClase
-{
+<pre><code>class MiClase{
 }</code></pre>
 
 <h2>Nombre de funciones</h2>
@@ -106,7 +105,68 @@ echo "Aqui el codigo";
 
 <pre><code>const DATE_APPROVED = '2014-09-07';</code></pre>
 
+<h2>Llaves de aperturas</h2>
 
+<p>Por su demostrada ayuda en la legibilidad de cogido PHP se usaran llaves de aperturas en la linea siguiente
+de todas las estructuras de control, funciones y demas.</p>
+
+<pre><code>if($valor)
+{
+    //Codigo
+}</code></pre>
+
+La unica excepcion seran las llaves de apertura de clases.
+
+<pre><code>class MiClase{
+}</code></pre>
+
+<h2>Lineas en blanco</h2>
+<p>El objetivo es hacer el codigo muy legible y para ello lo que se debe hacer uso sin miedo de las lineas en blanco o saltos de linea.</p>
+<p>Se deben usar lineas en blanco siempre que se considere necesario y en la siguiente situaciones:</p>
+<ul>
+	<li>Antes de comentarios</li>
+    <li>Antes de funciones</li>
+    <li>Antes de clases</li>
+    <li>Antes de estructuras de control (if, for, etc)</li>
+</ul>
+
+<h2>Tab vs Spaces</h2>
+
+<p>Se debe usar en el codigo Tabs en vez de Espacios.</p>
+
+<h2>Espacios en blanco</h2>
+
+<p>Asi como las lineas en blanco, los espacios en blanco aportaran mucho a la legibilidad del codigo. Por ello no se deben escatimar.</p>
+<p>Habra que usar espacios en blanco siempre en las siguiente situaciones:</p>
+
+<ul>
+	<li>
+		<p>En las condiciones de estructuras de control</p>
+		<pre><code>if($unValor = $otroValor)
+{
+
+}
+		</code></pre>
+	</li>
+	<li>
+		<p>En la asignación de variables</p>
+		<pre><code>$var = 0;</code></pre>
+	</li>
+	<li>
+		<p>Luego de cada coma en un array</p>
+		<pre><code>array('unValor', 'otroValor', 'otroMas')</code></pre>
+	</li>
+	<li>
+		<p>En array asociativos</p>
+		<pre><code>array('unvalor' => $unValor, 'otroValor' => $otroValor)</code></pre>
+	</li>
+</ul>
+
+<p>Un caso donde siempre de deben evitar los espacios en blanco es al final de cada linea de codigo. Esto es para evitar
+contratiempos con git y las diferencias de archivos.</p>
+<p>En sublime text basta con ir a Preferences->Settings - User y agregar la siguiente linea:</p>
+
+<pre><code>"trim_trailing_white_space_on_save": true,</code></pre>
 
 
 
