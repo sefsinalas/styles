@@ -91,6 +91,7 @@ echo "Aqui el codigo";
 {
 }</code></pre>
 
+<p>Los nombres de funciones deben estar en ingles.</p>
 
 <h2>Nombre de variables</h2>
 
@@ -98,12 +99,26 @@ echo "Aqui el codigo";
 
 <pre><code>$miVariable = TRUE;</code></pre>
 
+<p>Los nombres de variables deben estar en ingles.</p>
+
+<p>Las variables deben tener un nombre lo mas corto pero significativo posible. Deben tener un significado claro para cualquier persona
+aunque no haya visto nunca el codigo.</p>
+
+<pre><code>//Bien
+$clientAddress
+
+//Mal
+$cAdd
+</code></pre>
+
 
 <h2>Nombre de constantes</h2>
 
 <p>Las constantes se deberan nombrar usando siempre mayusculas y separando terminos con guion bajo.</p>
 
 <pre><code>const DATE_APPROVED = '2014-09-07';</code></pre>
+
+<p>Los nombres de contantes deben estar en ingles.</p>
 
 <h2>Llaves de aperturas</h2>
 
@@ -148,6 +163,14 @@ La unica excepcion seran las llaves de apertura de clases.
 }
 		</code></pre>
 	</li>
+    <li>
+        <p>En los casos de 2 parentesis juntos</p>
+        <pre><code>if( ($value == true) && ($anotherValue == false) )
+{
+
+}
+        </code></pre>
+    </li>
 	<li>
 		<p>En la asignación de variables</p>
 		<pre><code>$var = 0;</code></pre>
@@ -168,7 +191,33 @@ contratiempos con git y las diferencias de archivos.</p>
 
 <pre><code>"trim_trailing_white_space_on_save": true,</code></pre>
 
+<h2>Comillas</h2>
 
+<p>Se deben usar comillas simples si el contenido sera solo texto.</p>
+
+<pre><code>$name = 'Eduard Federic';</code></pre>
+
+<p>En el caso de que haya una variable en el texto se preferira usar comillas dobles en vez de
+    concatenar variables con comillas simples.<br>
+    Esto mejora la legibilidad del codigo y el sacrificio en performance es minimo.
+</p>
+
+<pre><code>//No usar
+$greetings = 'Hello '.$name;
+
+//Es preferible
+$greetings = "Hello $name";</code></pre>
+
+
+<h2>Codigo SQL</h2>
+<p>En el caso de tener codigo SQL este debe quedar claramente expresado usando una linea para cada parte de la consulta. Asi mismo
+las sentencias SQL deberan estar en mayusculas.</p>
+<pre><code>$result = findBySql('
+    SELECT * FROM user WHERE
+    age = 25 AND
+    city = "Salta"
+    ORDER BY age
+');</code></pre>
 
 
 
